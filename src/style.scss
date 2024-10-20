@@ -1,0 +1,32 @@
+@use 'sass:color';
+
+$primary-color: #3498db;
+$font-size: 16px;
+
+body {
+  font-size: $font-size;
+  background-color: $primary-color;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+
+  &--primary {
+    background-color: $primary-color;
+    border: none;
+
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+
+  &--secondary {
+    background-color: gray;
+
+    &:hover {
+      background-color: color.adjust(gray, $lightness: -10%);
+    }
+  }
+}
